@@ -41,11 +41,11 @@ def main():
     try:
         wines_data = read_data_from_excel_file(filepath)
     except FileNotFoundError:
-        print(f'Файл {filepath} не найден. Укажите верный путь к файлу при запуске скрипта')
+        print(f'Файл {filepath} не найден. При запуске скрипта укажите верный путь к файлу в аргументе командной строки.')
         return
 
     rendered_page = template.render(
-        wines=wines_data,
+        wines_data=wines_data,
         winery_age=calculate_winery_age()
     )
 
