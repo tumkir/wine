@@ -129,14 +129,12 @@
                     {% if drink.Акция %}
                       <img src="assets/profitable.png" alt="Выгодное предложение"
                         style="width:10rem;height: 10rem;position:absolute;right: -20px;top: -20px;">
-                    {% else %}
                     {% endif %}
                   <div>
                     <h3 class="heading mt-3 mb-3 text-dark">{{drink.Название}}</h3>
                     <p>
                       {% if drink.Сорт %}
                         Сорт винограда - {{drink.Сорт}}<br />
-                      {% else %}
                       {% endif %}
                       <span class="price">{{drink.Цена}} р.</span>
                     </p>
