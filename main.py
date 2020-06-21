@@ -45,7 +45,7 @@ def main():
         return
 
     rendered_page = template.render(
-        wines_data=wines_data,
+        wines_data=wines_data.items(),
         winery_age=calculate_winery_age()
     )
 
