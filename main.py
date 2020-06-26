@@ -17,8 +17,8 @@ template = env.get_template('template.html')
 def parse_arguments():
     parser = argparse.ArgumentParser()
     parser.add_argument('filepath', help="Путь к .xlsx файлу с данными", default='wine.xlsx', nargs='?')
-    path = parser.parse_args()
-    return path.filepath
+    args = parser.parse_args()
+    return args
 
 
 def calculate_winery_age():
@@ -36,7 +36,7 @@ def read_data_from_excel_file(filepath):
 
 
 def main():
-    filepath = parse_arguments()
+    filepath = parse_arguments().filepath
 
     try:
         wines_data = read_data_from_excel_file(filepath)
