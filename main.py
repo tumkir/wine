@@ -22,8 +22,9 @@ def parse_arguments():
 
 
 def calculate_winery_age():
+    year_of_foundation = 1920
     current_year = datetime.today().year
-    winery_age = current_year - 1920
+    winery_age = current_year - year_of_foundation
     return winery_age
 
 
