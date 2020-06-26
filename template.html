@@ -117,9 +117,9 @@
             </p>
           </div>
         </div>
-        {% for alcohol_type, drinks in wines_data %}
+        {% for category, drinks in wines_data %}
           <div class="col-12 section-title text-center mb-5">
-            <h2 class="d-block">{{alcohol_type}}</h2>
+            <h2 class="d-block">{{category}}</h2>
           </div>
           <div class="row">
             {% for drink in drinks %}
